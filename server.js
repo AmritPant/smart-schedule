@@ -1,12 +1,8 @@
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 
-//   Confituring .envfile
+//   Configuring .envfile
 dotenv.config();
-
-const express = require("express");
-
-const app = express();
 
 //  Connecting to a Database
 mongoose
@@ -20,9 +16,8 @@ mongoose
     console.error(`Some unexpected Error Occured`);
   });
 
-app.get("/", (req, res) => {
-  res.send("First API Request");
-});
+// Seting up the server
+const app = require("./app");
 
 app.listen(process.env.PORT, () => {
   console.log("Server is Running on Port 3001");
