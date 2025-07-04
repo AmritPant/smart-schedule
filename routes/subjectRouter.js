@@ -7,10 +7,8 @@ const Router = express.Router();
 Router.post("/", emptyBodyChecker, async (req, res) => {
   try {
     const subjecData = await Subject.create(req.body);
-    console.log(subjecData);
     res.status(200).json(subjecData);
   } catch (error) {
-    console.log(error);
     res.status(500).json({ message: error.message });
   }
 });
