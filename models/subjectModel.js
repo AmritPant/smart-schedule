@@ -6,7 +6,7 @@ const topicSchema = new mongoose.Schema({
     type: String,
     require: [true, "Please Provide the Name of the Topic"],
     minLength: [5, "A topic can't be less than 5 letters"],
-    maxLength: [30, "A topic can't be more than 30 letters"],
+    maxLength: [70, "A topic can't be more than 70 letters"],
     unqiue: [true, "A topic must be unqiue"],
   },
   weightage: {
